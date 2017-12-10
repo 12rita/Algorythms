@@ -1,0 +1,6 @@
+﻿  rita_homework.cpp
+c:\users\sergey\documents\visual studio 2017\projects\rita_homework\rita_homework\rita_homework.cpp(181): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\sergey\documents\visual studio 2017\projects\rita_homework\rita_homework\rita_homework.cpp(270): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\sergey\documents\visual studio 2017\projects\rita_homework\rita_homework\rita_homework.cpp(316): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\sergey\documents\visual studio 2017\projects\rita_homework\rita_homework\rita_homework.cpp(399): warning C4715: Differential::dif: значение возвращается не при всех путях выполнения
+  rita_homework.vcxproj -> C:\Users\Sergey\Documents\Visual Studio 2017\Projects\rita_homework\Debug\rita_homework.exe
