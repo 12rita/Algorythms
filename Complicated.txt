@@ -1,0 +1,4 @@
+log(tg(cos(x)))
+1/(x^cos(x))
+e^(log(ctg(x)))
+arcctg(sin(e^x))
