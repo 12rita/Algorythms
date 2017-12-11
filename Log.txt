@@ -1,5 +1,0 @@
-log(2,x)
-log(x,2)
-log(x,x)
-ln(x)
-ln(2)

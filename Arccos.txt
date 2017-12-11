@@ -1,2 +1,0 @@
-arccos(x)
--arccos(x)

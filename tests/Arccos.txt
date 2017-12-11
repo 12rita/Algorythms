@@ -1,0 +1,2 @@
+arccos(x)
+-arccos(x)

@@ -1,5 +1,0 @@
-log(tg(x)
-lon(x)
-x^cx
-ln(2,x)
-log(x)

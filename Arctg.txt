@@ -1,2 +1,0 @@
-arctg(x)
--arctg(x)
