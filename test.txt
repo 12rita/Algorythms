@@ -1,0 +1,16 @@
+tests/Arccos
+tests/Arcctg
+tests/Arcsin
+tests/Arctg
+tests/Complicated
+tests/Cos
+tests/Ctg
+tests/Div
+tests/Incorrect
+tests/Log
+tests/Minus
+tests/Mult
+tests/Plus
+tests/Pow
+tests/Sin
+tests/Tg
