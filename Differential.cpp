@@ -441,13 +441,15 @@ void Differential::handling()
 		else
 			output.erase(output.find("0")-1, 2);
 	}
-	while (((output[0] == '0') || (output[0] == '+')) && (output != "0"))
+	while (output.back() == '-')
+	{
+	output.pop_back();
+	}
+	*/
+	while (output[0] == '+')
 	{
 		output.erase(0, 1);
 	}
-	*/
-	while (output.back() == '-')
-	{
-		output.pop_back();
-	}
+	
+	
 }
