@@ -11,6 +11,7 @@ Differential::Differential()
 {
 	input = "empty";
 	output = "unknown";
+	count = 0;
 }
 
 void Differential::sinput(string s)
@@ -143,7 +144,7 @@ string Differential::flog(string s, int a)
 	else if (s[a + 1] == 'o')
 	{
 		if (s.find(',') == s.npos)
-			throw exception("incorrect input");
+			throw logic_error("incorrect input");
 		else
 		{
 			int k = 0;
@@ -239,6 +240,8 @@ string Differential::dif(string s)
 	vector<int> arctg;
 	vector<int> arcctg;
 
+	count++;
+
 	int k = 0;
 
 	if (s == "x")
@@ -272,20 +275,28 @@ string Differential::dif(string s)
 				po.push_back(i);
 
 			else if ((s[i] == 'c') && (s[i + 1] == 'o') && (s[i + 2] == 's'))
+			{
 				if ((i == 0) || (s[i - 1] != 'c'))
 					cos.push_back(i);
+			}
 
 			else if ((s[i] == 's') && (s[i + 1] == 'i') && (s[i + 2] == 'n'))
+			{
 				if ((i == 0) || (s[i - 1] != 'c'))
 					sin.push_back(i);
+			}
 
 			else if ((s[i] == 't') && (s[i + 1] == 'g'))
+			{
 				if ((i == 0) || (s[i - 1] != 'c'))
 					tg.push_back(i);
+			}
 
 			else if ((s[i] == 'c') && (s[i + 1] == 't') && (s[i + 2] == 'g'))
+			{
 				if ((i == 0) || ((s[i - 1] != 'c') && (s[i - 1] != 'r')))
 					ctg.push_back(i);
+			}
 
 			else if (((s[i] == 'l') && (s[i + 1] == 'o') && (s[i + 2] == 'g')) || ((s[i] == 'l') && (s[i + 1] == 'n')))
 				lo.push_back(i);
@@ -307,7 +318,7 @@ string Differential::dif(string s)
 
 	if (k != 0)
 	{
-		throw exception("incorrect input");
+		throw logic_error("incorrect input");
 	}
 
 	{
@@ -318,6 +329,7 @@ string Differential::dif(string s)
 			{
 				pm.erase(pm.begin());
 				s1 = s[0];
+				//s = s.substr(1);
 				return (s1 + dif(s.substr(1)));
 			}
 
@@ -377,11 +389,10 @@ string Differential::dif(string s)
 
 	if (s == input)
 	{
-		throw exception("incorrect input");
+		throw logic_error("incorrect input");
 	}
 
-	return "error";
-
+	throw logic_error("error!");
 }
 
 void Differential::difer()
@@ -392,6 +403,7 @@ void Differential::difer()
 
 void Differential::handling()
 {
+	
 	while (output.find("*(1)") != output.npos)
 	{
 		output.erase(output.find("*(1)"), 4);
@@ -421,6 +433,7 @@ void Differential::handling()
 	{
 		output.replace(output.find("--"), 2, "+");
 	}
+	/*
 	while ((output.find("0") != output.npos) && (output[0] != '0'))
 	{
 		if (output[output.find("0") + 1] == '+')
@@ -432,6 +445,7 @@ void Differential::handling()
 	{
 		output.erase(0, 1);
 	}
+	*/
 	while (output.back() == '-')
 	{
 		output.pop_back();

@@ -5,7 +5,7 @@ using namespace std;
 class Differential
 {
 	string input, output;
-	static int count;
+	int count;
 
 	string mult(string, string);
 	string div(string, string);
