@@ -87,7 +87,7 @@ string Differential::pow(string s, string s1)
 		else
 		{
 			string s2 = "ln(" + s + ')';
-			return ("1/(" + mult(s1, s2) + ')');
+			return ('(' + s + '^' + s1 + ")*(" + mult(s1, s2) + ')');
 		}
 	}
 }
@@ -123,7 +123,7 @@ string Differential::logariphm(string s, string s1)
 			{
 				string s2 = "ln(" + s + ')';
 				s = "ln(" + s1 + ')';
-				return ("1/(" + div(s, s2) + ')');
+				return (div(s, s2));
 			}
 		}
 	}

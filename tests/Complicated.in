@@ -1,4 +1,6 @@
 log(tg(cos(x)),sin(x))
 1/(x^cos(x))
-e^(log(ctg(x),x^x))
+log(ctg(x),x^x)
 arcctg(sin(e^x))
+ln(ctg(x))
+ln(x^x)
