@@ -1,6 +1,6 @@
-((1/(sin(x))*(cos(x)))*ln(tg(cos(x)))-(1/(tg(cos(x)))*(1/(cos(cos(x)))^2*(-sin(x))))*ln(sin(x)))/(ln(tg(cos(x)))^2)
-(-((x^cos(x))*((-sin(x))*ln(x)+(1/(x))*cos(x))))/((x^cos(x))^2)
-(e^(log(ctg(x),x^x)))*(((1/(x^x)*((x^x)*(ln(x)+(1/(x))*x)))*ln(ctg(x))-(1/(ctg(x))*(-1/(sin(x))^2))*ln(x^x))/(ln(ctg(x))^2))
--1/(1+(sin(e^x))^2)*(cos(e^x)*((e^x)))
+((1/(sin(x))*(cos(x)))*ln(tg(cos(x)))-(1/(tg(cos(x)))*(1/(cos(cos(x)))^2*(-sin(x))))*ln(sin(x)))/ln(tg(cos(x)))^2
+(-(x^cos(x)*((-sin(x))*ln(x)+(1/(x))*cos(x))))/(x^cos(x))^2
+e^(log(ctg(x),x^x))*(((1/(x^x)*(x^x*(ln(x)+(1/(x))*x)))*ln(ctg(x))-(1/(ctg(x))*(-1/(sin(x))^2))*ln(x^x))/ln(ctg(x))^2)
+-1/(1+(sin(e^x))^2)*(cos(e^x)*(e^x))
 1/(ctg(x))*(-1/(sin(x))^2)
-1/(x^x)*((x^x)*(ln(x)+(1/(x))*x))
+1/(x^x)*(x^x*(ln(x)+(1/(x))*x))

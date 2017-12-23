@@ -17,8 +17,8 @@ Differential::Differential()
 void Differential::sinput(string s)
 {
 	int i = 0;
-	
-	while (( i = s.find(' ')) != s.npos)
+
+	while ((i = s.find(' ')) != s.npos)
 	{
 		s.erase(i, 1);
 	}
@@ -36,19 +36,19 @@ string Differential::soutput()
 
 string Differential::mult(string s, string s1)
 {
-	
+
 
 	if (s.find('x') == s.npos)
 		if (s1.find('x') == s1.npos)
 			return("0");
 		else
-			return (s + "*(" + dif(s1)+')');
+			return (s + "*(" + dif(s1) + ')');
 	else
 		if (s1.find('x') == s1.npos)
-			return ('('+dif(s) + ")*" + s1);
+			return ('(' + dif(s) + ")*" + s1);
 		else
-			
-			return('('+dif(s) + ")*" + s1 + "+" + '(' + dif(s1) + ')' + "*" + s);
+
+			return('(' + dif(s) + ")*" + s1 + "+" + '(' + dif(s1) + ')' + "*" + s);
 }
 
 string Differential::div(string s, string s1)
@@ -57,12 +57,12 @@ string Differential::div(string s, string s1)
 		if (s1.find('x') == s1.npos)
 			return ("0");
 		else
-			return ("(-(" + dif(s1) + ")*" + s + ")/(" + s1 + "^2)");
+			return ("(-(" + dif(s1) + ")*" + s + ")/" + s1 + "^2");
 	else
 		if (s1.find('x') == s1.npos)
-			return ('('+dif(s) + ")/(" + s1+')');
+			return ('(' + dif(s) + ")/"+s1 );
 		else
-			return ("((" + dif(s) + ")*" + s1 + "-(" + dif(s1) + ")*" + s + ")/(" + s1 + "^2)");
+			return ("((" + dif(s) + ")*" + s1 + "-(" + dif(s1) + ")*" + s + ")/" + s1 + "^2");
 }
 
 string Differential::pow(string s, string s1)
@@ -77,9 +77,9 @@ string Differential::pow(string s, string s1)
 		{
 			if (s == "e")
 			{
-				return ('(' + s + '^' + s1 + ")*(" + dif(s1) + ')');
+				return ( s + '^' + s1 + "*(" + dif(s1) + ')');
 			}
-			return ('(' + s + '^' + s1 + "*ln(" + s + "))" + "*(" + dif(s1) + ')');
+			return ( s + '^' + s1 + "*ln(" + s + "))" + "*(" + dif(s1) + ')');
 		}
 
 	}
@@ -87,13 +87,13 @@ string Differential::pow(string s, string s1)
 	{
 		if (s1.find('x') == s1.npos)
 		{
-			
-			return ('(' + s1 + '*' + s + "^(" + s1 + "-1))*" + '(' + dif(s) + ')');
+
+			return (s1 + '*' + s + "^(" + s1 + "-1)*" + '(' + dif(s) + ')');
 		}
 		else
 		{
 			string s2 = "ln(" + s + ')';
-			return ('(' + s + '^' + s1 + ")*(" + mult(s1, s2) + ')');
+			return ( s + '^' + s1 + "*(" + mult(s1, s2) + ')');
 		}
 	}
 }
@@ -409,7 +409,7 @@ void Differential::difer()
 
 void Differential::handling()
 {
-	
+
 	while (output.find("*(1)") != output.npos)
 	{
 		output.erase(output.find("*(1)"), 4);
@@ -456,6 +456,6 @@ void Differential::handling()
 	{
 		output.erase(0, 1);
 	}
-	
-	
+
+
 }
