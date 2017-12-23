@@ -16,6 +16,12 @@ Differential::Differential()
 
 void Differential::sinput(string s)
 {
+	int i = 0;
+	
+	while (( i = s.find(' ')) != s.npos)
+	{
+		s.erase(i, 1);
+	}
 	input = s;
 	if ((input[0] == '-') && (input[1] == '-'))
 	{
@@ -36,10 +42,10 @@ string Differential::mult(string s, string s1)
 		if (s1.find('x') == s1.npos)
 			return("0");
 		else
-			return (s + '*' + dif(s1));
+			return (s + "*(" + dif(s1)+')');
 	else
 		if (s1.find('x') == s1.npos)
-			return (dif(s) + '*' + s1);
+			return ('('+dif(s) + ")*" + s1);
 		else
 			
 			return('('+dif(s) + ")*" + s1 + "+" + '(' + dif(s1) + ')' + "*" + s);
@@ -51,12 +57,12 @@ string Differential::div(string s, string s1)
 		if (s1.find('x') == s1.npos)
 			return ("0");
 		else
-			return ('-' + dif(s1) + '*' + s + '/' + s1 + "^2");
+			return ("(-(" + dif(s1) + ")*" + s + ")/(" + s1 + "^2)");
 	else
 		if (s1.find('x') == s1.npos)
-			return (dif(s) + '/' + s1);
+			return ('('+dif(s) + ")/(" + s1+')');
 		else
-			return ("(" + dif(s) + '*' + s1 + '-' + dif(s1) + '*' + s + ")/" + dif(s1) + "^2");
+			return ("((" + dif(s) + ")*" + s1 + "-(" + dif(s1) + ")*" + s + ")/(" + s1 + "^2)");
 }
 
 string Differential::pow(string s, string s1)
