@@ -29,7 +29,7 @@ int main()
 					//cout << "Input your function" << endl;
 					out << d.soutput() << endl;
 				}
-				catch (exception a)
+				catch (const exception& a)
 
 				{
 					out << a.what() << endl;
